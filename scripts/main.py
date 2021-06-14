@@ -1,6 +1,4 @@
-import csv
-import pandas as pd
-import numpy as np 
+
 import string
 
 
@@ -79,13 +77,17 @@ class SimplexAlgorithm:
 
 
 if __name__ == '__main__':
-    profit = [5,4] 
-    constraints  = [ [3,5], [4,1] ]
-    bounds  = [ 78, 36 , 0 ] 
+    # profit = [5,4] 
+    # constraints  = [ [3,5], [4,1] ]
+    # bounds  = [ 78, 36 , 0 ] 
 
     # profit = [3,4,1] 
     # constraints  = [ [3,10,5], [5,2,8], [8,10,3] ]
     # bounds  = [ 120, 6 , 105, 0 ]  
     
+    profit = [180,200] 
+    constraints  = [ [5,4], [10,20] ]
+    bounds  = [ 80, 200 , 0 ] 
+
     simplex = SimplexAlgorithm( profit,constraints,bounds ) 
     simplex.main()
