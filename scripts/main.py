@@ -43,7 +43,7 @@ class SimplexAlgorithm:
             if find_lowest_bound > compute:
                 find_lowest_bound = compute 
                 pivot[0]= count 
-        self.visited_pivots.append( pivot[0] )
+        # self.visited_pivots.append( pivot[0] )
         return  pivot 
 
         
@@ -55,7 +55,7 @@ class SimplexAlgorithm:
     def column_operations( self, pivot ):
         for count,consts in enumerate(self.tableau):
             value = consts[ pivot[1] ] 
-            if  count not in self.visited_pivots and value != 0:
+            if  count != pivot[0]  and value != 0:
                 self.tableau[count] = [  (value*-1)*(self.tableau[pivot[0]][count])+ const  for count,const in enumerate(self.tableau[count]) ] 
                
     def printing_tableu(self):
