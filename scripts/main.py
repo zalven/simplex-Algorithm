@@ -10,7 +10,6 @@ class SimplexAlgorithm:
         self.bounds = bounds 
         self.tableau = []
         self.used_length = len( profit )+1
-        self.visited_pivots = [] 
         self.convert_to_tableau()
 
 
@@ -41,7 +40,6 @@ class SimplexAlgorithm:
             if find_lowest_bound > compute:
                 find_lowest_bound = compute 
                 pivot[0]= count 
-        # self.visited_pivots.append( pivot[0] )
         return  pivot 
 
         
